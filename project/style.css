@@ -54,6 +54,28 @@ a {
 	text-decoration: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.section-intro {
+	text-align: center;
+}
+
+.section-intro .section-title {
+	display: inline-block;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+.section-intro .secondary-heading {
+	font-size: 50px;
+}
+
+.secondary-heading {
+	margin-bottom: 100px;
+}
+
 /* HEADER - COMMON */
 
 .header .logo img {
@@ -73,34 +95,39 @@ a {
 }
 
 .section-title,
-.title {
+.title,
+.section-top .top-button .btn:after {
 	font-family: "Poppins", sans-serif;
 }
 
-.secondary-heading {
+.section-intro .secondary-heading {
 	color: #181E4B;
 	font-family: "Volkhov", serif;
   font-weight: 600;
 }
-
+.section-title,
 .title {
 	color: #5E6282;
 	font-weight: 500;
 }
 
-/* SECTION TOP - COMMON */
-
-.container {
-	position: relative;
+button:hover {
+	cursor: pointer;
 }
 
-.container::after {
+/* SECTION TOP - COMMON */
+
+/* .container {
+	position: relative;
+} */
+
+/* .section-top::after {
 	content: "";
 	position: absolute;
 	background: url("./assets/section_top_bg.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-}
+} */
 
 .section-top::before {
 	content: "";
@@ -134,6 +161,29 @@ a {
 	background-color: rgb(245 156 5);
 }
 
+.section-top .top-button .btn {
+	position: relative;
+	border: none;
+	background-color: #DF6951;
+}
+
+.section-top .top-button .btn:before {
+	content: "";
+	position: absolute;
+}
+
+.section-top .top-button .btn:after {
+	content: "Play Demo";
+	position: absolute;
+	font-weight: 500;
+}
+
+/* SECTION SERVICES - COMMON */
+.section-services .services-list {
+	display: flex;
+	justify-content: space-between;
+}
+
 /* DESKTOP CSS */
 
 /* HEADER */
@@ -142,33 +192,39 @@ a {
 	width: 114px;
 }
 
-.container .header,
 .wrapper {
+	width: 1440px;
 	padding: 0 120px;
+	margin: 0 auto;
 }
 
 .container .header .nav {
-	width: calc(100% - 250px);
+	width: calc(100% - 22vw);
 	display: flex;
 }
 
-.container .header,
 .container .nav .nav-list,
 .container .nav .header-side,
-.container .nav .side-list {
+.container .nav .side-list,
+.section-top .top-button {
 	display: flex;
 }
 
 .container .header {
-	justify-content: space-between;
-	align-items: center;
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
 
+.container .header .wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .container .header .nav,
 .container .nav .header-side,
-.container .header-side .side-list {
+.container .header-side .side-list,
+.section-top .top-button {
 	align-items: center;
 }
 
@@ -192,21 +248,23 @@ a {
 
 /* SECTION TOP */
 
-.section-top .section-content {
-	/* background-image: url(./images/traveler_transparent.png); */
-	background-size: 100% 100%;
+.section-top {
+	background-image: url(./images/traveler_transparent.png);
+	background-size: 784px 764px;
 	background-repeat: no-repeat;
-	background-position: 58px 0px;
+	background-position: 588px 0px;
+	padding-bottom: 140px;
+	padding-top: 110px;
 }
 
-.container:after {
+/* .section-top::after {
 	width: 766px;
 	height: 872px;
 	right: -60px;
 	top: -315px;
 	z-index: -1;
 	rotate: 4deg;
-}
+} */
 
 .section-top .section-title {
 	font-size: 20px;
@@ -249,12 +307,81 @@ a {
 }
 
 .section-top .section-content .title {
-	line-height: 1.4;
+	line-height: 1.8;
 	margin-bottom: 43px;
+	width: 456px;
 }
 
 .section-top .section-content .top-link {
 	font-size: 18px;
 	padding: 20px 20px;
 	border-radius: 10px;
+	margin-right: 44px;
+}
+
+.section-top .top-button .btn {
+	width: 52px;
+	height: 52px;
+	border-radius: 80px;
+}
+
+.section-top .top-button .btn:after {
+	width: 92px;
+	top: 50%;
+	left: 60px;
+	transform: translateY(-50%);
+	font-size: 17px;
+}
+
+.section-top .top-button .btn:before {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 12px solid #fff;
+	top: 50%;
+	left: 24px;
+	transform: translateY(-50%);
+}
+
+/* SECTION SERVICES - COMMON */
+
+.section-services .services-list .tertiary-heading {
+	font-family: 'Open Sans';
+}
+
+/* SECTION SERVICES */
+
+.section-services .services-list .item-picture {
+	width: 92px;
+	height: 78px;
+	margin: 0 auto 34px;
+}
+
+.section-services .services-list .tertiary-heading {
+	text-align: center;
+	font-weight: 500;
+	margin-bottom: 25px;
+}
+
+.section-services .item-picture img {
+	max-width: 100%;
+}
+
+.section-services .services-list .list-item {
+	width: 190px;
+	height: 230px;
+}
+
+.section-services .list-item .zoom {
+	padding: 50px;
+  background-color: green;
+  transition: transform .2s; /* Animation */
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.section-services .services-list .zoom:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
