@@ -1,6 +1,6 @@
 # Ignore all files named .DS_Store
 **/.DS_Store
-**/*.DS_Store
-*.fig
-*.xd
+*/**/.DS_Store
+**/.fig
+**/.xd
 .DS_Store
