@@ -49,6 +49,15 @@ table {
 
 /* COMMON CSS */
 
+:root {
+  --font-poppins: "Poppins", sans-serif;
+	--font-volkhov: "Volkhov", serif;
+	--font-open-sans: "Open Sans", sans-serif;
+	--font-medium: 500;
+	--font-bold: 600;
+  --white: #ffffff;
+}
+
 a {
 	color: #000;
 	text-decoration: none;
@@ -76,6 +85,11 @@ a {
 	margin-bottom: 100px;
 }
 
+.item-description {
+	font-family: var(--font-poppins);
+	font-size: 16px;
+}
+
 /* HEADER - COMMON */
 
 .header .logo img {
@@ -89,26 +103,24 @@ a {
 
 .header .nav li,
 .header .nav select {
-	font-family: "Open Sans", sans-serif;
+	font-family: ;
 	font-size: 17px;
-	font-weight: 500;
+	font-weight: var(--font-medium);
 }
 
 .section-title,
-.title,
 .section-top .top-button .btn:after {
-	font-family: "Poppins", sans-serif;
+	font-family: var(--font-poppins);
 }
 
 .section-intro .secondary-heading {
 	color: #181E4B;
-	font-family: "Volkhov", serif;
-  font-weight: 600;
+	font-family: var(--font-volkhov);
+  font-weight: var(--font-bold);
 }
-.section-title,
-.title {
+.section-title {
 	color: #5E6282;
-	font-weight: 500;
+	font-weight: var(--font-medium);
 }
 
 button:hover {
@@ -143,9 +155,9 @@ button:hover {
 }
 
 .section-top .section-content .top-link {
-	font-family: "Open Sans", sans-serif;
+	font-family: var(--font-open-sans);
 	display: inline-block;
-	font-weight: 500;
+	font-weight: var(--font-medium);
 }
 
 .section-top .secondary-heading span:after {
@@ -175,7 +187,8 @@ button:hover {
 .section-top .top-button .btn:after {
 	content: "Play Demo";
 	position: absolute;
-	font-weight: 500;
+	font-weight: var(--font-medium);
+	color: #686D77;
 }
 
 /* SECTION SERVICES - COMMON */
@@ -306,7 +319,8 @@ button:hover {
 	margin-bottom: 52px;
 }
 
-.section-top .section-content .title {
+.section-top .section-content .item-description {
+	color: #5E6282;
 	line-height: 1.8;
 	margin-bottom: 43px;
 	width: 456px;
@@ -363,17 +377,13 @@ button:hover {
 	font-family: 'Open Sans';
 }
 
-.services-list .list-item .item-description {
-	font-family: "Poppins", sans-serif;
-}
-
 .section-services .services-list .list-item {
 	text-align: center;
 }
 
 .section-services .services-list .list-item:nth-child(2) {
 	position: relative;
-	border-radius: 20px;
+	border-radius: 36px;
 	background-color: #fff;
 	box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, .2);
 }
@@ -409,7 +419,7 @@ button:hover {
 
 .section-services .services-list .tertiary-heading {
 	font-size: 20px;
-	font-weight: 500;
+	font-weight: var(--font-medium);
 	margin-bottom: 25px;
 }
 
@@ -421,4 +431,214 @@ button:hover {
 	width: 266px;
 	height: auto;
 	padding: 50px;
+}
+
+/* SECTION-DESTINATIONS - COMMON CSS */
+
+
+
+/* SECTION-DESTINATIONS - DESKTOP */
+
+.section-destinations {
+	margin-bottom: 192px;
+}
+
+.section-destinations .destinations-list,
+.section-destinations .destinations-list .destinations-description {
+	display: flex;
+}
+
+.section-destinations .destinations-list {
+	justify-content: space-around;
+}
+
+.section-destinations .destinations-list .destinations-description {
+	justify-content: space-between;
+	margin-bottom: 26px;
+}
+
+.section-destinations .destinations-list .list-item {
+	position: relative;
+	width: 314px;
+	height: 457px;
+	border-radius: 24px;
+	box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, .2);
+}
+
+.section-destinations .destinations-list .list-item:nth-child(1) {
+	background: url("./images/destination_img_01.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.section-destinations .destinations-list .list-item:nth-child(2) {
+	background: url("./images/destination_img_02.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.section-destinations .destinations-list .list-item:nth-child(3) {
+	position: relative;
+	background: url("./images/destination_img_03.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.section-destinations .destinations-list .list-item:nth-child(3)::after {
+	content: "";
+	position: absolute;
+	background: url(./assets/destinations_deco.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 96px;
+	height: 252px;
+	bottom: 55px;
+	right: -64px;
+	z-index: -1;
+}
+
+.section-destinations .list-item .item-description {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 315px;
+	height: 130px;
+	background: #fff;
+	padding: 32px 20px 44px;
+}
+
+.section-destinations .destinations-list .destinations-duration {
+	position: relative;
+	padding-left: 30px;
+}
+
+.section-destinations .destinations-list .destinations-duration::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(./assets/location.png) no-repeat;
+	width: 20px;
+	height: 20px;
+	background-size: 100% 100%;
+}
+
+/* SECTION-BOOK - COMMON */
+
+.section-book .book-list .list-item {
+	color: #5E6282;
+}
+
+/* SECTION-BOOK - DESKTOP */
+
+.section-book {
+	margin-bottom: 216px;
+}
+
+.section-book .wrapper {
+	display: flex;
+	justify-content: space-around;
+}
+
+.section-book .section-intro .section-title {
+	display: block;
+}
+
+.section-book .section-intro .section-title,
+.section-book .section-intro .secondary-heading {
+	text-align: left;
+}
+
+.section-book .section-content {
+	width: 496px;
+}
+
+.section-book .book-picture {
+	position: relative;
+}
+
+.section-book .book-picture::before {
+	content: "";
+	position: absolute;
+	background: url("./images/book_bg.png");
+	top: 110px;
+	right: -210px;
+	width: 485px;
+	height: 400px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.section-book .book-picture::after {
+	content: "";
+	position: absolute;
+	background: url("./assets/blue_glitters.png");
+	top: -20px;
+	right: -240px;
+	width: 354px;
+	height: 367px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	z-index: -1;
+}
+
+.section-book .book-list .tertiary-heading {
+	font-size: 16px;
+	font-weight: var(--font-bold);
+	font-family: var(--font-poppins);
+}
+
+.section-book .book-list .tertiary-heading,
+.section-book .book-list .item-description {
+	line-height: 1.4;
+}
+
+.section-book .book-list .list-item {
+	padding-left: 70px;
+}
+
+.section-book .book-list .list-item:not(:last-child) {
+	margin-bottom: 54px;
+}
+
+.section-book .book-list .list-item:nth-child(1),
+.section-book .book-list .list-item:nth-child(2),
+.section-book .book-list .list-item:nth-child(3) {
+	position: relative;
+}
+
+.section-book .book-list .list-item:nth-child(1):before {
+	content: "";
+	position: absolute;
+	background: url("./assets/book_icon_01.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	top: 0;
+	left: 0;
+	width: 47px;
+	height: 48px;
+}
+
+.section-book .book-list .list-item:nth-child(2):before {
+	content: "";
+	position: absolute;
+	background: url("./assets/book_icon_02.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	top: 0;
+	left: 0;
+	width: 47px;
+	height: 48px;
+}
+
+.section-book .book-list .list-item:nth-child(3):before {
+	content: "";
+	position: absolute;
+	background: url("./assets/book_icon_03.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	top: 0;
+	left: 0;
+	width: 47px;
+	height: 48px;
 }
