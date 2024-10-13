@@ -457,7 +457,7 @@ button:hover {
 }
 
 .section-destinations .destinations-list {
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 .section-destinations .destinations-list .destinations-description {
