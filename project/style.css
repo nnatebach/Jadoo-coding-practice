@@ -68,8 +68,9 @@ a {
 }
 
 .container {
-	max-width: 1440px;
+	max-width: 1160px;
 	width: 100%;
+	margin: 0 auto;
 }
 
 img {
@@ -214,14 +215,12 @@ button:hover {
 	width: 114px;
 }
 
-.wrapper {
-	width: 1440px;
+/* .wrapper {
 	padding: 0 120px;
-	margin: 0 auto;
-}
+} */
 
 .container .header .nav {
-	width: calc(100% - 22vw);
+	width: calc(100% - 300px);
 	display: flex;
 }
 
@@ -274,7 +273,7 @@ button:hover {
 	background-image: url(./images/traveler_transparent.png);
 	background-size: 784px 764px;
 	background-repeat: no-repeat;
-	background-position: 588px 0px;
+	background-position: 400px 0px;
 	padding-bottom: 140px;
 	padding-top: 110px;
 }
@@ -316,7 +315,7 @@ button:hover {
 }
 
 .section-top .section-content {
-	width: 590px;
+	width: 580px;
 }
 
 .section-top .section-content .section-title {
@@ -437,7 +436,7 @@ button:hover {
 }
 
 .section-services .services-list .list-item {
-	width: 266px;
+	width: 290px;
 	height: auto;
 	padding: 50px;
 }
