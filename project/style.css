@@ -545,7 +545,7 @@ button:hover {
 
 .section-book .wrapper {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 .section-book .section-intro .section-title {
@@ -570,7 +570,7 @@ button:hover {
 	position: absolute;
 	background: url("./images/book_bg.png");
 	top: 110px;
-	right: -210px;
+	right: 0;
 	width: 485px;
 	height: 400px;
 	background-size: 100% 100%;
@@ -582,7 +582,7 @@ button:hover {
 	position: absolute;
 	background: url("./assets/blue_glitters.png");
 	top: -20px;
-	right: -240px;
+	right: -20px;
 	width: 354px;
 	height: 367px;
 	background-size: 100% 100%;
