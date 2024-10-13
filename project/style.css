@@ -654,13 +654,37 @@ button:hover {
 
 /* SECTION-TESTIMONIALS - COMMON */
 
+.section-testimonials .testimonials-slides .slides-picture {
+	position: relative;
+}
 
+.section-testimonials .testimonials-slides .slides-picture::before {
+	content: "";
+	position: absolute;
+	top: -30px;
+	left: -25px;
+	background: url("./images/testimonials_profile.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 68px;
+	height: 68px;
+}
+
+.section-testimonials .subscribe {
+	background: #DFD7F9;
+}
+
+.section-testimonials .subscribe span {
+	font-family: var(--font-poppins);
+	font-weight: var(--font-medium);
+}
 
 /* SECTION-TESTIMONIALS - DESKTOP */
 
 .section-testimonials .section-intro {
 	display: flex;
 	justify-content: space-between;
+	padding-bottom: 135px;
 }
 
 .section-testimonials .section-intro .testimonials-pagination {
@@ -709,4 +733,27 @@ button:hover {
 .section-testimonials .testimonials-sites .site-item:nth-child(5) {
 	width: 94px;
 	height: 21px;
+}
+
+.section-testimonials .subscribe {
+	padding: 94px 156px 77px 153px;
+}
+
+.section-testimonials .subscribe span {
+	font-size: 33px;
+}
+
+.section-testimonials .subscribe form {
+	text-align: center;
+}
+
+.section-testimonials .subscribe .email {
+	padding: 30px 26px 30px 66px;
+	border-radius: 10px;
+	border: none;
+}
+
+.section-testimonials .subscribe .submit-button {
+	width: 180px;
+	height: 68px;
 }
