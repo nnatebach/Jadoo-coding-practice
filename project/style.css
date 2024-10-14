@@ -728,7 +728,27 @@ button:hover {
 	transform: translateY(-50%);
 }
 
+.section-testimonials .subscribe-form .subscribe-content::before {
+	content: "";
+	position: absolute;
+	background: url("./assets/form_circles_01.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.section-testimonials .subscribe-form .subscribe-content::after {
+	content: "";
+	position: absolute;
+	background: url("./assets/form_circles_02.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
 /* SECTION-TESTIMONIALS - DESKTOP */
+
+.section-testimonials {
+	padding-bottom: 157px;
+}
 
 .section-testimonials .section-title {
 	margin-bottom: 27px;
@@ -833,11 +853,141 @@ button:hover {
 }
 
 .section-testimonials .subscribe-form .subscribe-content::before {
-	content: "";
-	position: absolute;
-	/* background: url("./assets/form_circles_01.png"); */
 	width: 389px;
 	height: 397px;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	bottom: -82px;
+	left: -146px;
+}
+
+.section-testimonials .subscribe-form .subscribe-content::after {
+	width: 285px;
+	height: 290px;
+	top: -94px;
+	right: -210px;
+}
+
+/* FOOTER - COMMON */
+
+.footer {
+	font-family: var(--font-poppins);
+	font-weight: var(--font-medium);
+}
+
+.footer .footer-info .tertiary-heading {
+	color: #080809;
+	font-weight: var(--font-bold);
+}
+
+.footer-content .footer-list a,
+.footer .copyright {
+	font-weight: var(--font-medium);
+}
+
+.footer .footer-content small,
+.footer-content .footer-externals .footer-app,
+.footer-content .footer-list a,
+.footer .copyright {
+	color: #5E6282;
+}
+
+.footer .copyright {
+	display: block;
+	text-align: center;
+}
+
+.footer-externals .footer-apps .footer-app {
+	display: inline-block;
+}
+
+.footer-content .footer-externals .footer-socials {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-content .footer-socials li a {
+	display: inline-block;
+}
+
+.footer-content .footer-socials img {
+	box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, .2);
+	border-radius: 20px;
+}
+
+/* FOOTER - DESKTOP */
+
+.footer .footer-left .secondary-heading {
+	font-size: 44px;
+	margin-bottom: 36px;
+}
+
+.footer .footer-content {
+	justify-content: space-between;
+}
+
+.footer .footer-content .footer-info,
+.footer .footer-content {
+	display: flex;
+}
+
+.footer .footer-content small {
+	font-size: 13px;
+}
+
+.footer .footer-info .tertiary-heading {
+	font-size: 21px;
+	margin-bottom: 44px;
+}
+
+.footer .footer-list .list-item {
+	line-height: 2;
+}
+
+.footer-content .footer-list a {
+	font-size: 18px;
+}
+
+.footer .footer-info .footer-links:not(:last-child) {
+	margin-right: 70px;
+}
+
+.footer-content .footer-externals .footer-socials {
+	height: 45px;
+	margin-bottom: 32px;
+}
+
+.footer-externals .footer-apps .app-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-externals .footer-apps .footer-app {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.footer-externals .app-list li:nth-child(1) {
+	width: 107px;
+	height: 35px;
+	margin-right: 7px;
+}
+
+.footer-externals .app-list li:nth-child(2) {
+	width: 100px;
+	height: 35px;
+}
+
+.footer .copyright {
+	font-size: 14px;
+	padding: 90px 0;
+}
+
+.footer-content .footer-socials li:nth-child(1) a,
+.footer-content .footer-socials li:nth-child(3) a {
+	width: 41px;
+	height: 41px;
+}
+
+.footer-content .footer-socials li:nth-child(2) a {
+	width: 45px;
+	height: 45px;
 }
