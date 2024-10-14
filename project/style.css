@@ -70,7 +70,7 @@ a {
 }
 
 .container {
-	max-width: 1160px;
+	max-width: 1170px;
 	width: 100%;
 	margin: 0 auto;
 }
@@ -86,7 +86,7 @@ img {
 .section-intro .section-title {
 	display: inline-block;
 	font-size: 18px;
-	margin-bottom: 20px;
+	/* margin-bottom: 20px; */
 }
 
 .section-intro .secondary-heading {
@@ -100,6 +100,10 @@ img {
 .item-description {
 	font-family: var(--font-poppins);
 	font-size: 16px;
+}
+
+.wrapper {
+	padding: 0 15px;
 }
 
 /* HEADER - COMMON */
@@ -125,7 +129,8 @@ img {
 	font-family: var(--font-poppins);
 }
 
-.section-intro .secondary-heading {
+.section-intro .secondary-heading,
+.section-top .section-content .secondary-heading {
 	color: #181E4B;
 	font-family: var(--font-volkhov);
   font-weight: var(--font-bold);
@@ -137,6 +142,17 @@ img {
 
 button:hover {
 	cursor: pointer;
+}
+
+/* COMMON CSS - DESKTOP */
+
+.section-title {
+	margin-bottom: 30px;
+}
+
+.common-section {
+	padding-top: 115px;
+	padding-bottom: 110px;
 }
 
 /* SECTION TOP - COMMON */
@@ -183,12 +199,14 @@ button:hover {
 .section-top .section-content .top-link {
 	color: #fff;
 	background-color: rgb(245 156 5);
+	box-shadow: 0 20px 35px 0 rgba(241, 165, 1,.15)
 }
 
 .section-top .top-button .btn {
 	position: relative;
 	border: none;
 	background-color: #DF6951;
+	box-shadow: 0 4px 4px 0 rgba(0,0,0,.25);
 }
 
 .section-top .top-button .btn:before {
@@ -204,25 +222,26 @@ button:hover {
 }
 
 /* SECTION SERVICES - COMMON */
+
 .section-services .services-list {
 	display: flex;
 	justify-content: space-between;
 }
 
-/* DESKTOP CSS */
+.container .header .wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 
-/* HEADER */
+/* HEADER - DESKTOP */
 
 .header .logo {
 	width: 114px;
 }
 
-/* .wrapper {
-	padding: 0 120px;
-} */
-
 .container .header .nav {
-	width: calc(100% - 300px);
+	width: calc(100% - 338px);
 	display: flex;
 }
 
@@ -234,14 +253,12 @@ button:hover {
 }
 
 .container .header {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 47px;
+	padding-bottom: 22px;
 }
 
 .container .header .wrapper {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	padding: 0 5px;
 }
 
 .container .header .nav,
@@ -255,39 +272,40 @@ button:hover {
 	margin-left: 20px;
 }
 
-.header .nav-list .list-item {
-	padding: 0 30px;
+.header .nav-list .list-item:not(:last-child) {
+	padding-right: 53px;
+}
+
+.header .nav .nav-list {
+	margin-right: 60px;
 }
 
 .header .header-side li {
 	padding: 0 26px;
 }
 
-.header .header-side .signup {
+.header .header-side .signup a {
 	border: 1px solid #000;
-	border-radius: 8px;
-	padding: 10px 16px;
+	padding: 7px 20px;
+	border-radius: 5px;
 }
 
-/* SECTION TOP */
+/* SECTION TOP - COMMON */
+
+.section-top .section-content .section-title {
+	display: inline-block;
+}
+
+/* SECTION TOP - DESKTOP */
 
 .section-top {
 	background-image: url(./images/traveler_transparent.png);
 	background-size: 784px 764px;
 	background-repeat: no-repeat;
-	background-position: 400px 0px;
-	padding-bottom: 140px;
-	padding-top: 110px;
+	background-position: 430px -2px;
+	padding-top: 115px;
+	padding-bottom: 110px;
 }
-
-/* .section-top::after {
-	width: 766px;
-	height: 872px;
-	right: -60px;
-	top: -315px;
-	z-index: -1;
-	rotate: 4deg;
-} */
 
 .section-top .section-title {
 	font-size: 20px;
@@ -310,8 +328,8 @@ button:hover {
 }
 
 .section-top .secondary-heading span:after {
-	bottom: 10px;
-	left: -35px;
+	bottom: 18px;
+	left: -34px;
 	width: 385px;
 	height: 12px;
 }
@@ -320,27 +338,28 @@ button:hover {
 	width: 580px;
 }
 
-.section-top .section-content .section-title {
-	margin-bottom: 43px;
-	display: inline-block;
-}
+/* .section-top .section-content .section-title {
+	margin-bottom: 30px;
+} */
 
 .section-top .section-content .secondary-heading {
-	margin-bottom: 52px;
+	margin-bottom: 33px;
+	letter-spacing: -3.4px;
+	line-height: 1.05;
 }
 
 .section-top .section-content .item-description {
 	color: #5E6282;
 	line-height: 1.8;
-	margin-bottom: 43px;
+	margin-bottom: 34px;
 	width: 456px;
 }
 
 .section-top .section-content .top-link {
 	font-size: 18px;
-	padding: 20px 20px;
 	border-radius: 10px;
-	margin-right: 44px;
+	padding: 20px 24px;
+	margin-right: 46px;
 }
 
 .section-top .top-button .btn {
@@ -352,7 +371,7 @@ button:hover {
 .section-top .top-button .btn:after {
 	width: 92px;
 	top: 50%;
-	left: 60px;
+	left: 72px;
 	transform: translateY(-50%);
 	font-size: 17px;
 }
@@ -360,9 +379,9 @@ button:hover {
 .section-top .top-button .btn:before {
 	width: 0;
 	height: 0;
-	border-top: 10px solid transparent;
-	border-bottom: 10px solid transparent;
-	border-left: 12px solid #fff;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 10px solid #fff;
 	top: 50%;
 	left: 24px;
 	transform: translateY(-50%);
