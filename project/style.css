@@ -71,7 +71,6 @@ a {
 
 .container {
 	position: relative;
-	overflow-x: hidden;
 }
 
 .container::after {
@@ -1236,12 +1235,16 @@ button:hover {
 	border: none;
 }
 
-.section-testimonials .testimonials-pagination .pagination-dot {
+/* .section-testimonials .testimonials-pagination .pagination-dot {
 	background-color: #39425D;
-}
+} */
 
 .section-testimonials .subscribe-form .email {
 	position: relative;
+}
+
+.section-testimonials .testimonials-pagination .secondary-heading {
+	text-align: left;
 }
 
 .section-testimonials .subscribe-form .email::before {
@@ -1298,19 +1301,14 @@ button:hover {
 		margin-bottom: 90px;
 	}
 
-	.section-testimonials .testimonials-pagination .secondary-heading {
-		text-align: left;
-	}
-
-	.section-testimonials .testimonials-pagination .pagination-dot {
-		position: relative;
+	.section-testimonials .pagination-dot .swiper-pagination-bullet {
 		width: 12px;
 		height: 12px;
 		border-radius: 10px;
 		background-color: #39425D;
 	}
 
-	.section-testimonials .testimonials-pagination .pagination-dot::before,
+	/* .section-testimonials .testimonials-pagination .pagination-dot::before,
 	.section-testimonials .testimonials-pagination .pagination-dot::after {
 		content: "";
 		position: absolute;
@@ -1318,17 +1316,17 @@ button:hover {
 		height: 12px;
 		border-radius: 10px;
 		background-color: #E5E5E5;
-	}
+	} */
 
-	.section-testimonials .testimonials-pagination .pagination-dot::before {
+	/* .section-testimonials .testimonials-pagination .pagination-dot::before {
 		top: 0;
 		left: 38px;
-	}
+	} */
 
-	.section-testimonials .testimonials-pagination .pagination-dot::after {
+	/* .section-testimonials .testimonials-pagination .pagination-dot::after {
 		top: 0;
 		left: 75px;
-	}
+	} */
 
 	.section-testimonials .section-intro .testimonials-slides {
 		position: relative;
@@ -1517,19 +1515,15 @@ button:hover {
 		margin-bottom: .90rem;
 	}
 
-	.section-testimonials .testimonials-pagination .secondary-heading {
-		text-align: left;
-	}
-
-	.section-testimonials .testimonials-pagination .pagination-dot {
+	/* .section-testimonials .testimonials-pagination .pagination-dot {
 		position: relative;
 		width: .12rem;
 		height: .12rem;
 		border-radius: .10rem;
 		background-color: #39425D;
-	}
+	} */
 
-	.section-testimonials .testimonials-pagination .pagination-dot::before,
+	/* .section-testimonials .testimonials-pagination .pagination-dot::before,
 	.section-testimonials .testimonials-pagination .pagination-dot::after {
 		content: "";
 		position: absolute;
@@ -1537,17 +1531,17 @@ button:hover {
 		height: .12rem;
 		border-radius: .10rem;
 		background-color: #E5E5E5;
-	}
+	} */
 
-	.section-testimonials .testimonials-pagination .pagination-dot::before {
+	/* .section-testimonials .testimonials-pagination .pagination-dot::before {
 		top: 0;
 		left: .38rem;
-	}
+	} */
 
-	.section-testimonials .testimonials-pagination .pagination-dot::after {
+	/* .section-testimonials .testimonials-pagination .pagination-dot::after {
 		top: 0;
 		left: .75rem;
-	}
+	} */
 
 	.section-testimonials .section-intro .testimonials-slides {
 		position: relative;
